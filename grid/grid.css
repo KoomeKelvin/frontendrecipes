@@ -1,0 +1,125 @@
+body {
+    background: linear-gradient(to right, hsla(120, 50%, 90%, 1), hsla(120, 100%, 80%, 1));
+    box-sizing: border-box;
+    font-family: "PT Serif", sans-serif;
+}
+
+.landing-section {
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: "landing-section-header landing-section-header landing-section-header landing-section-header "
+        "landing-section-navbar landing-section-navbar . landing-section-navbar-search"
+        "landing-section-main-content landing-section-main-content landing-section-main-content landing-section-right-sidebar"
+        "landing-section-footer landing-section-footer landing-section-footer landing-section-footer";
+}
+
+.landing-section-header {
+    grid-area: landing-section-header;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.landing-section-header>h1 {
+    padding: 20px;
+}
+
+.landing-section-navbar {
+    grid-area: landing-section-navbar;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-template-areas: "workexperience education projects-done reviews technologies";
+    justify-content: start;
+    gap: 20px;
+}
+
+.landing-section-navbar>div {
+    padding: 10px;
+    color: hsla(120, 100%, 10%, 1);
+    background-color: hsla(120, 100%, 80%, 1)
+}
+
+.landing-section-navbar-search {
+    grid-area: landing-section-navbar-search;
+    margin-top: 3rem;
+    display: inline-flex;
+    padding: 2px;
+}
+
+.landing-section-navbar-search>button {
+    border-radius: 5px;
+    border: none;
+}
+
+.landing-section-navbar-search>input[type="text"] {
+    border-radius: 5px;
+    border: 2px solid hsla(120, 50%, 60%, 1);
+    background-color: hsla(120, 50%, 95%, 1);
+}
+
+.landing-section-navbar-search>button:focus {
+    background-color: hsla(120, 50%, 90%, 1);
+}
+
+.landing-section-navbar-search>input[type="text"]:focus {
+    outline: none;
+    border: 2px solid hsla(120, 100%, 40%, 1);
+}
+
+.landing-section-main-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    grid-area: landing-section-main-content;
+}
+
+.content {
+    background-color: hsla(120, 50%, 95%, 1);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 5px;
+}
+
+.content>button {
+    border: none;
+    border-radius: 5px;
+    background-color: hsla(120, 100%, 80%, 1);
+    color: hsla(120, 100%, 10%, 1);
+    padding: 5px;
+
+}
+
+.landing-section-right-sidebar {
+    grid-area: landing-section-right-sidebar;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.landing-section-right-sidebar>p {
+    color: hsla(120, 100%, 10%, 1);
+}
+
+.landing-section-right-sidebar>ul {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
+}
+
+.landing-section-right-sidebar>ul>li {
+    background-color: hsla(120, 100%, 95%, 1);
+    width: 70%;
+    padding: 3px;
+    color: hsla(120, 100%, 10%, 1);
+    box-shadow: 2px 2px 5px hsla(120, 100%, 10%, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.landing-section-footer {
+    padding: 2rem;
+    grid-area: landing-section-footer;
+}
