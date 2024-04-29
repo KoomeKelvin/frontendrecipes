@@ -4,6 +4,7 @@ body {
     font-family: "PT Serif", sans-serif;
 }
 
+
 .landing-section {
     display: grid;
     grid-template-columns: repeat(autofit, minmax(200px, 1fr));
@@ -24,6 +25,11 @@ body {
 
 .landing-section-header>h1 {
     padding: 20px;
+}
+
+.about>h2 {
+    height: 1rem;
+    width: auto;
 }
 
 .landing-section-navbar {
