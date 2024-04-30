@@ -8,7 +8,6 @@ function aboutMe() {
     let isDeleting = false;
     let charIndex = 0;
     let textIndex = 0;
-
     function type() {
         let currentText = mySkills[textIndex];
         if (!isDeleting && charIndex < currentText.length) {
@@ -24,15 +23,10 @@ function aboutMe() {
             isDeleting = !isDeleting;
             if (!isDeleting) {
                 textIndex = (textIndex + 1) % mySkills.length;
-
-
             }
             setTimeout(type, pause);
         }
-
     }
-
     type();
-
 }
 aboutMe();

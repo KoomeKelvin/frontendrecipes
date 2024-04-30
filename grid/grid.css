@@ -113,6 +113,7 @@ body {
     flex-direction: column;
     list-style: none;
     padding: 5px 0;
+    animation: bounce 1s infinite alternate;
 }
 
 .landing-section-right-sidebar>ul>li {
@@ -128,4 +129,14 @@ body {
 .landing-section-footer {
     padding: 2rem;
     grid-area: landing-section-footer;
+}
+
+@keyframes bounce {
+    from {
+        tranform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
 }
