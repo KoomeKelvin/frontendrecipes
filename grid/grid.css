@@ -4,15 +4,28 @@ body {
     font-family: "PT Serif", sans-serif;
 }
 
+.fa-sun {
+    color: #fff;
+}
+
+.fa-moon {
+    color: hsla(120, 50%, 40%, 1);
+}
 
 .landing-section {
     display: grid;
     grid-template-columns: repeat(autofit, minmax(200px, 1fr));
     grid-template-rows: auto;
-    grid-template-areas: "landing-section-header landing-section-header landing-section-header landing-section-header "
+    grid-template-areas:
+        ". . . dark-mode"
+        "landing-section-header landing-section-header landing-section-header landing-section-header "
         "landing-section-navbar landing-section-navbar . landing-section-navbar-search"
         "landing-section-main-content landing-section-main-content landing-section-main-content landing-section-right-sidebar"
         "landing-section-footer landing-section-footer landing-section-footer landing-section-footer";
+}
+
+.dark-mode {
+    grid-area: dark-mode;
 }
 
 .landing-section-header {
@@ -94,7 +107,6 @@ body {
     background-color: hsla(120, 100%, 80%, 1);
     color: hsla(120, 100%, 10%, 1);
     padding: 5px;
-
 }
 
 .landing-section-right-sidebar {
@@ -139,4 +151,62 @@ body {
     to {
         transform: translateY(-10px);
     }
+}
+
+/*code for dark mode */
+.dark-mode-enable {
+    background: linear-gradient(to right, hsla(120, 50%, 10%, 1), hsla(120, 50%, 25%, 1));
+    color: #fff;
+}
+
+.dark-mode-enable .landing-section-navbar>div {
+    background-color: hsla(120, 100%, 10%, 1);
+    color: hsla(120, 100%, 80%, 1)
+}
+
+.dark-mode-enable .landing-section-navbar-search>input[type="text"] {
+    border-radius: 5px;
+    border: 2px solid hsla(120, 50%, 30%, 1);
+    background-color: hsla(120, 50%, 50%, 1);
+}
+
+.dark-mode-enable .landing-section-navbar-search>button:focus {
+    background-color: hsla(120, 50%, 40%, 1);
+}
+
+.dark-mode-enable .landing-section-navbar-search>input[type="text"]:focus {
+    outline: none;
+    border: 2px solid hsla(120, 100%, 20%, 1);
+}
+
+.dark-mode-enable .content {
+    background-color: hsla(120, 50%, 40%, 1);
+    color: hsla(120, 100%, 50%, 1);
+}
+
+.dark-mode-enable .content>button {
+    color: hsla(120, 100%, 50%, 1);
+    background-color: hsla(120, 100%, 10%, 1);
+}
+
+.dark-mode-enable .landing-section-right-sidebar>ul>li {
+    color: hsla(120, 100%, 80%, 1);
+    width: 70%;
+    padding: 3px;
+    background-color: hsla(120, 100%, 10%, 1);
+    box-shadow: 2px 2px 5px hsla(120, 100%, 10%, 1);
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dark-mode-enable .landing-section-header>h1 {
+    color: hsla(120, 100%, 80%, 1);
+}
+
+.dark-mode-enable .about-me {
+    color: hsla(120, 100%, 70%, 1);
+}
+
+.dark-mode-enable .landing-section-navbar-search>button {
+    background-color: hsla(120, 100%, 70%, 1);
 }

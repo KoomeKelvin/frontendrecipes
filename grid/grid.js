@@ -30,3 +30,15 @@ function aboutMe() {
     type();
 }
 aboutMe();
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const modeElement = document.getElementById('mode');
+    const body = document.body;
+
+    modeElement.addEventListener('click', () => {
+        body.classList.toggle('dark-mode-enable');
+        modeElement.classList.toggle('fa-sun');
+        modeElement.classList.toggle('fa-moon');
+    });
+});
