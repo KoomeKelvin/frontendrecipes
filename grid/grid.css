@@ -20,6 +20,7 @@ body {
         ". . . dark-mode"
         "landing-section-header landing-section-header landing-section-header landing-section-header "
         "landing-section-navbar landing-section-navbar . landing-section-navbar-search"
+        "myskills myskills myskills ."
         "landing-section-main-content landing-section-main-content landing-section-main-content landing-section-right-sidebar"
         "landing-section-footer landing-section-footer landing-section-footer landing-section-footer";
 }
@@ -86,6 +87,38 @@ body {
 .landing-section-navbar-search>input[type="text"]:focus {
     outline: none;
     border: 2px solid hsla(120, 100%, 40%, 1);
+}
+
+.myskills {
+    grid-area: myskills;
+}
+
+#skillset .skill {
+    margin-bottom: 5px;
+}
+
+#skillset .progress-bar {
+    border-radius: 5px;
+    height: 20px;
+    background: linear-gradient(to right, hsla(120, 50%, 30%, 1), hsla(120, 100%, 60%, 1));
+    width: 0;
+
+}
+
+#skillset .progress {
+    border-radius: 5px;
+    height: 100%;
+    background-color: transparent;
+}
+
+#skillset .progress-bar.animated {
+    animation: animateProgressBar 1s ease forwards;
+}
+
+@keyframes animateProgressBar {
+    to {
+        width: var(--progress);
+    }
 }
 
 .landing-section-main-content {

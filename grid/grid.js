@@ -42,3 +42,28 @@ document.addEventListener('DOMContentLoaded', function () {
         modeElement.classList.toggle('fa-moon');
     });
 });
+
+//javascript code for animating my skills
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                const progressBar = entry.target.querySelector('.progress-bar');
+                const progressBarData = progressBar.dataset.progress;
+                progressBar.style.setProperty('--progress', `${progressBarData}%`);
+                progressBar.classList.add('animated');
+                observer.unobserve(entry.target)
+            }
+        });
+    });
+
+    // call the observer and then give it the skills
+    const skillset = document.querySelectorAll('#skillset .skill');
+    skillset.forEach(skill => {
+        observer.observe(skill);
+    });
+
+});
