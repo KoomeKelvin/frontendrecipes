@@ -67,3 +67,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+/**code for displaying the navbar */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navbarButtonIcon = document.querySelector('.navbar-button-icon');
+    const navbarButton = document.querySelector('.navbar-button');
+    const navbarItems = document.querySelector('.navbar-items');
+
+    navbarButton.addEventListener('click', () => {
+        navbarItems.classList.toggle('active');
+        navbarButtonIcon.classList.toggle('fa-bars');
+        navbarButtonIcon.classList.toggle('fa-x');
+
+    });
+});

@@ -4,6 +4,52 @@ body {
     font-family: "PT Serif", sans-serif;
 }
 
+
+/** code for the nav bar**/
+.navbar {
+    background-color: hsla(120, 100%, 80%, 1);
+    display: flex;
+    padding: 5px 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar-logo-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.navbar-logo-section img {
+    border-radius: 5px;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.navbar-button {
+    display: none;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.navbar-items a {
+    color: hsla(120, 100%, 10%, 1);
+    text-decoration: none;
+}
+
+.navbar-items a:hover {
+    color: hsla(120, 100%, 20%, 1);
+    text-decoration: none;
+}
+
+
 .fa-sun {
     color: #fff;
 }
@@ -12,6 +58,7 @@ body {
     color: hsla(120, 50%, 40%, 1);
 }
 
+/** code for the grid layout for screens beyond 768px **/
 .landing-section {
     display: grid;
     grid-template-columns: repeat(autofit, minmax(200px, 1fr));
@@ -242,4 +289,55 @@ body {
 
 .dark-mode-enable .landing-section-navbar-search>button {
     background-color: hsla(120, 100%, 70%, 1);
+}
+
+/** navbar code in dark mode **/
+.dark-mode-enable .navbar {
+    background-color: hsla(120, 100%, 10%, 1);
+}
+
+
+.dark-mode-enable .navbar-items a {
+    color: hsla(120, 100%, 60%, 1);
+}
+
+.dark-mode-enable .navbar-items a:hover {
+    color: hsla(120, 100%, 50%, 1);
+}
+
+/** code for changing content on small layouts up to 768px **/
+@media only screen and (max-width: 768px) {
+
+    /** enable the navbar-button **/
+    .navbar-button {
+        display: block;
+        margin-left: auto;
+    }
+
+    /** hide the navbar-items section **/
+    .navbar-items {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /** when class of active is added to navbar-items they will be displayed **/
+    .navbar-items.active {
+        display: flex;
+    }
+
+    /** code for changing the grid layout on small screeens up to 768px **/
+    .landing-section {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "landing-section-header"
+            "landing-section-navbar "
+            "landing-section-navbar-search"
+            "myskills"
+            "landing-section-main-content"
+            "landing-section-right-sidebar"
+            "landing-section-footer";
+    }
 }
