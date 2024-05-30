@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="description" content="A form designed in plain css and HTML">
+<meta name="keywords" content="Html forms, html form with plain css and html">
+<meta name="viewport" content="width= device-width, initial-scale=1.0">
+<title> HTML modal designed in plain CSS and HTML</title>
+<link rel="stylesheet" href="modal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+<script src="modal.js" defer>
+</script>
+
+<body>
+    <div id="project-wrapper">
+        <div class="project">
+            <h2>Web development </h2>
+            <p> I have done many projects on the web as a fullstack web developer </p>
+            <a href="#" data-modal-target="#webProject" class="btn see-more">See more</a>
+        </div>
+        <div class="project">
+            <h2>C programming </h2>
+            <p> I have done and prepared many tutorials on C programming centered around fundamentals of C </p>
+            <a href="#" data-modal-target="#cProject" class="btn see-more">See more</a>
+        </div>
+        <div class="project">
+            <h2>Computer Applications </h2>
+            <p> I have prepared video guides and notes on computer applications from Ms Access to Excel..</p>
+            <a href="#" data-modal-target="#caProject" class="btn see-more">See more</a>
+            <div>
+            </div>
+        </div>
+    </div>
+
+    <!-- code for webProject modal-->
+    <div class="modal" id="webProject">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2> web projects</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p> I have done full stack web projects for clients</p>
+                        <a href="https://github.com/KoomeKelvin/fix-a" target="blank" class="source-link">
+                            <i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="../images/fixa1.png" alt="Koome - A full-stack developer">
+                                <img src="../images/fixa1.png" alt="Koome - A full-stack developer">
+                                <img src="../images/fixa1.png" alt="Koome - A full-stack developer">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="column">
+                        <h2>Technologies used</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Laravel</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2> A brief description of a project I did</h2>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/CGF0To4F1mI?si=dATtgiZI2iaF6RAP"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- code for cProject modal-->
+    <div class="modal" id="cProject">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>C programming</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p> I have prepared materials for training C</p>
+                        <a href="https://www.youtube.com/watch?v=VvIMEmvdvng&list=PLKPAZUHAYi1PWD_UuNSdm1VlMpkggRuLJ"
+                            target="blank" class="source-link">
+                            <i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="../images/c1.png" alt="Koome - A full-stack developer">
+                                <img src="../images/c2.png" alt="Koome - A full-stack developer">
+                                <img src="../images/c3.png" alt="Koome - A full-stack developer">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="column">
+                        <h2>Areas tackled</h2>
+                        <ul>
+                            <li>Loops</li>
+                            <li>Files</li>
+                            <li>Arrays</li>
+                            <li>Data strucures</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2> check the videos I prepared</h2>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/UodTe_YZYL4?si=lHTSSRbeD4p6MC4p"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- code for caProject modal-->
+    <div class="modal" id="caProject">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Computer Applications</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <p> I have prepared materials for Computer Applications</p>
+                        <a href="https://www.youtube.com/watch?v=ArkVSEGRZ8Y&t=65s" target="blank" class="source-link">
+                            <i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="column image-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide">
+                                <img src="../images/database1.png" alt="Koome - A full-stack developer">
+                                <img src="../images/database2.png" alt="Koome - A full-stack developer">
+                                <img src="../images/database3.png" alt="Koome - A full-stack developer">
+                            </div>
+                            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="column">
+                        <h2>Areas Covered</h2>
+                        <ul>
+                            <li>Microsoft Access</li>
+                            <li>Excel</li>
+                            <li>Powerpoint</li>
+                            <li>Word Processing</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h2> check the videos I prepared</h2>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/ArkVSEGRZ8Y?si=UR4Dk1vWoLUdAo2X"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

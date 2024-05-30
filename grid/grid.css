@@ -4,6 +4,9 @@ body {
     font-family: "PT Serif", sans-serif;
 }
 
+.thenavbar {
+    max-width: 1200px;
+}
 
 /** code for the nav bar**/
 .navbar {
@@ -12,12 +15,13 @@ body {
     padding: 5px 5px;
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
 }
 
 .navbar-logo-section {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     gap: 1rem;
     flex-grow: 1;
 }
@@ -309,16 +313,19 @@ body {
 @media only screen and (max-width: 768px) {
 
     /** enable the navbar-button **/
+
     .navbar-button {
         display: block;
         margin-left: auto;
+        cursor: pointer;
     }
 
     /** hide the navbar-items section **/
     .navbar-items {
-        display: none;
-        width: 100%;
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        display: none;
     }
 
     /** when class of active is added to navbar-items they will be displayed **/
@@ -330,7 +337,7 @@ body {
     .landing-section {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 1fr;
+        grid-template-rows: repeat(autofit, minmax(200px, 1fr));
         grid-template-areas:
             "landing-section-header"
             "landing-section-navbar "

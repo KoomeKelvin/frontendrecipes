@@ -1,0 +1,160 @@
+body {
+    background-color: hsla(120, 50%, 95%, 1);
+    font-family: "Roboto", sans-serif;
+}
+
+#project-wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.project {
+    background-color: hsla(120, 50%, 80%, 1);
+    padding: 15px 5px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 1px hsla(120, 50%, 40%, 1);
+}
+
+.project h2 {
+    font-weight: 700;
+    color: hsla(120, 50%, 40%, 1);
+}
+
+.project p {
+    font-weight: 600;
+    color: hsla(120, 50%, 40%, 1);
+}
+
+.see-more {
+    padding: 7px 7px;
+    background-color: hsla(120, 50%, 90%, 1);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 15px;
+    color: hsla(120, 50%, 30%, 1);
+
+}
+
+.see-more:hover {
+    background-color: hsla(120, 50%, 30%, 1);
+    color: hsla(120, 50%, 90%, 1);
+}
+
+@media only screen and (max-width: 768px) {
+    #project-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modal-row {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+/* code for project modals */
+.modal {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+    background-color: hsla(120, 50%, 90%, 1);
+    z-index: 1;
+    display: none;
+}
+
+.modal-content {
+    width: 60%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    max-height: 80vh;
+    max-width: 80%;
+    box-sizing: border-box;
+    background-color: hsla(120, 50%, 70%, 1);
+    border: 1px solid hsla(120, 100%, 80%, 1);
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:active {
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 50%;
+    min-width: 250px;
+    margin: 5px;
+}
+
+.carousel-slide img {
+    height: auto;
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.prev,
+.next {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: hsla(120, 100%, 90%, 1);
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.next:hover,
+.prev:hover {
+    background-color: hsla(120, 100%, 80%, 1);
+}
