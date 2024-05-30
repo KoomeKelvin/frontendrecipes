@@ -8,7 +8,7 @@ document.querySelectorAll('.btn.see-more').forEach(button => {
             modal.style.display = "block";
             disableScroll();
         }
-        const carouselContainer = document.querySelector('.carousel-container');
+        const carouselContainer = modal.querySelector('.carousel-container');
         if (carouselContainer) {
             initializeCarousel(carouselContainer);
         }
@@ -53,7 +53,6 @@ function showSlides(n, slides) {
 }
 
 function showSlide(n) {
-    let i, j;
     var carousels = document.querySelectorAll('.carousel-slide');
     carousels.forEach(carousel => {
         const slides = carousel.querySelectorAll("img");
