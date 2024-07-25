@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> HTML Navbar designed in plain CSS and HTML</title>
+<link rel="stylesheet" href="navbar.css">
+<script src="navbar.js" defer>
+</script>
+
+<body>
+    <div class="navbar">
+        <div class="left-navbar">
+            <a href="#">
+                <img src="../images/movie.png" class="logo" alt="navbar css and html only">
+            </a>
+
+            <ul class="left-navbar-menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">My List</a>
+                </li>
+                <li>
+                    <a href="#">Browse by Genre</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-navbar">
+            <div class="search">
+                <input type="text">
+                <button class="btn search">
+                    Search
+                </button>
+            </div>
+            <a href="#">Trending</a>
+            <button class="btn notifications">
+                <svg xmlns="http://www.w3.org/2000/svg" class="navbar-notification" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                </svg>
+                <span class="notification-count">3</span>
+            </button>
+            <div class="profile">
+                <img src="../images/avatar.png" alt="navbar built in plain css and html" class="avatar">
+                <div class="menu-bar">
+                    <ul>
+                        <li> <a href="#">Settings</a></li>
+                        <li> <a href="#">profile</a></li>
+                        <li class="separator"></li>
+                        <li> <a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- html code for small screen-->
+    <div class="smallscreen-navbar">
+        <div class="humberger-nav">
+            <a href="#">
+                <img src="../images/movie.png" class="logo" alt="navbar css and html only">
+            </a>
+            <button class="humberger-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="bars" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="cross bars-is-closed" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="small-screen-menu">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">My List</a>
+                </li>
+                <li>
+                    <a href="#">Browse by Genre</a>
+                </li>
+            </ul>
+            <div class="smallscreen-mainmenu">
+                <div class="search">
+                    <input type="text">
+                    <button class="btn search">
+                        Search
+                    </button>
+                </div>
+                <a href="#">Trending</a>
+                <div>
+                    <button class="btn notifications">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-notification" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                        </svg>
+                        <span class="notification-count">3</span>
+                    </button>
+                </div>
+
+                <div class="smallscreen-profile">
+                    <img src="../images/avatar.png" alt="navbar built in plain css and html" class="avatar">
+                    <ul class="small-screen-submenu">
+                        <li> <a href="#">Settings</a></li>
+                        <li> <a href="#">profile</a></li>
+                        <li class="separator"></li>
+                        <li> <a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

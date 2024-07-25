@@ -3,8 +3,10 @@
 
 - [x] sample form and its css
 - [x] sample landing page(based on grid)
-- [] table
-- [] modal
-- [] navbar
-**and much more is coming**
+- [X] modal
+- [X] navbar
+- [X] notification button
+- [X] form
+- []  tables
+**and much more is coming comment on what you would like added**
 

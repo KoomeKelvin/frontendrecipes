@@ -1,0 +1,31 @@
+.notification {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(120, 100%, 90%, 1);
+}
+
+.notification-button {
+    background-color: inherit;
+    border: none;
+    position: relative;
+}
+
+.notification-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.notification-count {
+    position: absolute;
+    width: 1 rem;
+    height: 1rem;
+    padding: 1px 3px;
+    background-color: hsla(120, 100%, 20%, 1);
+    color: hsla(120, 100%, 90%, 1);
+    border-radius: 50%;
+    top: -10%;
+    right: -10%;
+}
