@@ -1,0 +1,17 @@
+.humberger-button {
+    border: none;
+    width: 2rem;
+    height: 2rem;
+}
+
+.bars-is-closed {
+    display: none;
+}
+
+.cross-is-closed {
+    display: none;
+}
+
+.cross-is-open {
+    display: block;
+}
