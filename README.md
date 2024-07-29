@@ -7,6 +7,7 @@
 - [X] navbar
 - [X] notification button
 - [X] form
+- [X] Movie landing page
 - []  tables
 - []  buttons
 **and much more is coming comment on what you would like added**
