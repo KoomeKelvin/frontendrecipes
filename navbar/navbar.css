@@ -1,12 +1,9 @@
-body {
-    background-color: hsla(120, 100%, 90%, 1);
-}
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    height: 3rem;
-    background-color: hsla(120, 100%, 85%, 1);
+    height: 4rem;
+    background-color: hsla(207, 20%, 91%, 1);
 }
 
 .logo {
@@ -15,14 +12,16 @@ body {
     padding: 5px 10px;
 }
 
-.left-navbar {
+.left-navbar, .right-navbar {
     display: flex;
-
+    align-items:center;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .left-navbar-menu {
     display: flex;
-    align-items: center;
+    align-items: right;
 }
 
 .left-navbar li {
@@ -34,18 +33,12 @@ body {
     text-decoration: none;
 }
 
-.right-navbar {
-    display: flex;
-    padding-right: 4rem;
-    align-items: center;
-    gap: 10px;
-}
 
 .btn {
     border: none;
     border-radius: 10%;
     padding: 3px 5px;
-    background-color: hsla(120, 100%, 98%, 1);
+    background-color: none;
     color: hsla(120, 100%, 20%, 1);
 }
 
@@ -53,13 +46,16 @@ body {
     position: relative;
     background-color: inherit;
 }
-
-.search input[type="text"] {
-    border: none;
-    background-color: hsla(120, 100%, 98%, 1);
+.notifications svg{
+    width: 1.5rem;
     height: 1.5rem;
 }
 
+.search input[type="text"] {
+    border: none;
+    background-color: hsla(240, 100%, 98%, 1);
+    height: 1.5rem;
+}
 
 .navbar-notification {
     width: 1rem;
@@ -88,7 +84,7 @@ body {
     position: absolute;
     top: 100%;
     right: -20%;
-    background-color: hsla(120, 100%, 85%, 1);
+    background-color: hsla(207, 20%, 91%, 1);
 }
 
 .avatar {
@@ -137,7 +133,7 @@ a:hover {
 @media screen and (max-width:768px) {
     .smallscreen-navbar {
         display: block;
-        background-color: hsla(120, 100%, 85%, 1);
+        background-color: hsla(207, 20%, 91%, 1);
     }
 
     .navbar {
@@ -155,10 +151,10 @@ a:hover {
         padding: 5px 5px;
     }
 
-    .smallscreen-mainmenu {
+    .smallscreen-submenu {
         display: flex;
         flex-direction: column;
-        padding-left: 10px;
+        padding-left: 10px; 
         gap: 20px;
     }
 
@@ -167,37 +163,37 @@ a:hover {
         cursor: pointer;
     }
 
-    .small-screen-menu {
+    .hide-small-screen-menu {
         display: none;
     }
-
-    .small-screen-submenu {
-        display: none;
-        position: absolute;
-        top: 60%;
-        background-color: hsla(120, 100%, 85%, 1);
-        padding-inline-start: 0px;
-        padding: 0 10px;
-    }
-
 
     .display-small-screen-menu {
         display: block;
     }
+    .display-small-screen-menu ul{
+        padding-inline-start: 0px;
+    }
 
-    .bars-is-open {
+    .smallscreen-submenu{
+        display: flex;
+    }
+
+    .bars-button-is-open {
         display: block;
     }
 
-    .bars-is-closed {
+    .bars-button-is-closed {
         display: none;
     }
 
-    .cross-is-open {
+    .cross-button-is-open {
         display: block;
     }
+    .hide-small-screen-profile-menu{
+        display:none;
+    }
 
-    .smallscreen-profile:hover .small-screen-submenu {
+    .smallscreen-profile:hover .hide-small-screen-profile-menu {
         display: flex;
         flex-direction: column;
     }
@@ -208,8 +204,8 @@ a:hover {
         border: none;
     }
 
-    .cross,
-    .bars {
+    .cross-button,
+    .bars-button {
         width: 20px;
         height: 20px;
         border: none;
